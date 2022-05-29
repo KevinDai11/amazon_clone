@@ -4,7 +4,13 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import PinDrop from "@material-ui/icons/PinDrop";
 
+import {Link} from "react-router-dom";
+import { useStateValue } from "./StateProvider";
+
 function Header() {
+
+    const [{ cart, user }, dispatch] = useStateValue();
+
   return (
     <div className = "header">
       <img className = "header__logo" src = "http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt = "amazon logo"/>
@@ -42,7 +48,7 @@ function Header() {
 
             <div className="header__optionBasket">
                 <ShoppingBasketIcon />
-                <span className = "header__optionLineTwo header__basketCount">0</span>
+                <span className = "header__optionLineTwo header__basketCount">{cart.length}</span>
             </div>
         </div>
     </div>

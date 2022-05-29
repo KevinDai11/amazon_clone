@@ -46,6 +46,7 @@
     display: flex;
     align-items: center;
     color: white;
+    margin-right: 5px;
 }
 
 .header_basketCount{
