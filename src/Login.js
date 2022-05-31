@@ -12,18 +12,18 @@ function Login(){
 
     const signIn = (e) => {
         e.preventDefault();
-
-        signInWithEmailAndPassword(auth,email, password)
+        signInWithEmailAndPassword(auth, email, password)
             .then((auth) => {
                 history('/');
             })
             .catch((error) => alert(error.message));
+        
     };
 
     const register = (e) => {
         e.preventDefault();
 
-        createUserWithEmailAndPassword(auth,email, password)
+        createUserWithEmailAndPassword(auth, email, password)
             .then((auth) => {
                 if(auth){
                     history('/');
