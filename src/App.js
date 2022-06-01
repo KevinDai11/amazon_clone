@@ -4,6 +4,7 @@ import React, {useEffect} from 'react';
 import Header from './Header'
 import Login from './Login';
 import Home from './Home';
+import Checkout from './Checkout';
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import {onAuthStateChanged} from 'firebase/auth';
@@ -37,6 +38,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
+            <Route exact path="/checkout" element={<Checkout />} />
             <Route exact path ="/login" element = {<Login/>}/>
             <Route exact path="/" element={<><Header/><Home/></>}/>
         </Routes>
