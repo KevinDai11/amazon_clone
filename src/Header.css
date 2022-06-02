@@ -32,7 +32,11 @@
 .header__searchIcon{
     padding: 5px;
     height: 22px;
-    background-color: #cd9042;
+    background-color: #ffb759;
+}
+
+.header__searchIcon:hover{
+    background: #d39400;
 }
 
 .header__optionLineOne{
@@ -47,6 +51,10 @@
     align-items: center;
     color: white;
     margin-right: 5px;
+}
+
+.header__optionBasket:hover{
+    color: rgba(255, 255, 255, 0.808)
 }
 
 .header_basketCount{
@@ -64,9 +72,17 @@
     margin: 0 10px;
     color: white;
 }
+
+.header__option:hover{
+    color: rgba(255, 255, 255, 0.808)
+}
 .header__option2{
     display: flex;
     flex-direction: column;
     margin: 0 10px;
     color: white;
+}
+
+.header__option2:hover{
+    color: rgba(255, 255, 255, 0.808)
 }

@@ -16,6 +16,10 @@
     color: #111;
 }
 
+.checkoutProduct__info > button:hover {
+    background: #d39400;
+}
+
 .checkoutProduct__image {
     object-fit: contain;
     width: 180px;
