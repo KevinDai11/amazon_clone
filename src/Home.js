@@ -19,6 +19,7 @@ function Home() {
             price={1467.44}
             rating={5}
             image="https://m.media-amazon.com/images/I/71gD8WdSlaL._AC_SL1500_.jpg"
+            count = {1}
           />
           <Product
             id="49538094"
@@ -26,6 +27,7 @@ function Home() {
             price={369.99}
             rating={5}
             image="https://m.media-amazon.com/images/I/41g5QWiX+hL._AC_.jpg"
+            count = {1}
           />
         </div>
 
@@ -36,6 +38,7 @@ function Home() {
             price={399.00}
             rating={5}
             image="https://m.media-amazon.com/images/I/71gg8mPlAuL._AC_SL1500_.jpg"
+            count = {1}
           />
           <Product
             id="23445930"
@@ -43,6 +46,7 @@ function Home() {
             price={59.99}
             rating={5}
             image="https://m.media-amazon.com/images/I/51MzOVciT3L._AC_SL1000_.jpg"
+            count = {1}
           />
           <Product
             id="3254354345"
@@ -50,6 +54,7 @@ function Home() {
             price={749.00}
             rating={5}
             image="https://ss7.vzw.com/is/image/VerizonWireless/apple-ipad-air-spacegray-2022?hei=400"
+            count = {1}
           />
         </div>
 
@@ -60,6 +65,7 @@ function Home() {
             price={1199.99}
             rating={5}
             image="https://m.media-amazon.com/images/I/818jj0DF-dL._AC_SL1500_.jpg"
+            count = {1}
           />
         </div>
       </div>

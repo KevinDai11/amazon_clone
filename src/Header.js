@@ -7,15 +7,16 @@ import PinDrop from "@material-ui/icons/PinDrop";
 import {Link} from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import {auth} from "./firebase";
-
+let length = 0;
 function Header() {
-
+    
     const [{ cart, user }, dispatch] = useStateValue();
     const handleAuthentication = () => {
         if (user) {
             auth.signOut();
         }
     };
+
 
 
   return (
@@ -61,12 +62,20 @@ function Header() {
             <Link to = "/checkout">
                 <div className="header__optionBasket">
                     <ShoppingBasketIcon />
-                    <span className = "header__optionLineTwo header__basketCount">{cart.length}</span>
+                    <span className = "header__optionLineTwo header__basketCount">{length}</span>
                 </div>
             </Link>
+            
         </div>
     </div>
   );
 }
-
-export default Header
+export const getCartCount = (cart) =>{
+    let count = 0;
+    for(let i = 0; i < cart.length; i++){
+        count += cart[i].count;
+    }
+    length = count + 1;
+    
+};
+export default Header;

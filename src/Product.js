@@ -1,12 +1,14 @@
 import React from 'react'
 import './Product.css'
 import { useStateValue } from './StateProvider'
-function Product({id, title, image, price, rating}) {
+import {getCartCount} from './Header.js'
+function Product({id, title, image, price, rating, count}) {
 
     const [{ cart }, dispatch] = useStateValue();
 
     const addToCart = () => {
         // dispatch the item into the data layer
+        getCartCount(cart);
         dispatch({
             type: 'ADD_TO_CART',
             item: {
@@ -15,6 +17,7 @@ function Product({id, title, image, price, rating}) {
                 image: image,
                 price: price,
                 rating: rating,
+                count: count,
             },
         });
     };

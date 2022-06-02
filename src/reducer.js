@@ -1,4 +1,3 @@
-import { StateProvider } from "./StateProvider";
 
 export const initialState = {
     cart: [],
@@ -6,16 +5,28 @@ export const initialState = {
   };
   
   // Selector
-  export const getCartTotal = (cart) => 
+export const getCartTotal = (cart) => 
     cart.reduce((amount, item) => item.price + amount, 0);
   
 const reducer = (state, action) => {
     switch (action.type) {
         case 'ADD_TO_CART':
-            return {
-                ...state,
-                cart: [...state.cart, action.item],
-            };
+            const index_add = state.cart.findIndex((cartItem) => cartItem.id === action.item.id);
+            let newCart_add = [...state.cart];
+            if (index_add >= 0){
+                newCart_add[index_add].count += .5;
+                return {
+                    ...state,
+                    cart: newCart_add,
+                }
+            }
+            else{
+                return {
+                    ...state,
+                    cart: [...state.cart, action.item],
+                };
+            }
+            
         case "SET_USER":
           return {
               ...state,
