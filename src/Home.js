@@ -20,6 +20,7 @@ function Home() {
             rating={5}
             image="https://m.media-amazon.com/images/I/71gD8WdSlaL._AC_SL1500_.jpg"
             count = {1}
+            info = "This is a test product"
           />
           <Product
             id="49538094"

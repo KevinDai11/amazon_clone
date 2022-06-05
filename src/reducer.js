@@ -1,12 +1,15 @@
 
 export const initialState = {
     cart: [],
-    user: null
+    user: null,
+    item: null,
   };
   
   // Selector
 export const getCartTotal = (cart) => 
     cart.reduce((amount, item) => item.price + amount, 0);
+
+    
   
 const reducer = (state, action) => {
     switch (action.type) {
@@ -50,10 +53,15 @@ const reducer = (state, action) => {
                 cart: newCart,
             }
 
-          case "EMPTY_CART":
+        case "EMPTY_CART":
             return {
                 ...state,
                 cart: [],
+            };
+        case "SET_ITEM":
+            return {
+                ...state,
+                item: action.item,
             };
         default:
             return state;

@@ -1,0 +1,42 @@
+.productpage{
+    display: flex;
+    margin: 20px 0;
+}
+.productpage__info{
+    padding-left: 20px;
+}
+.productpage__image{
+    object-fit: contain;
+    width: 540px;
+}
+
+.productpage__info > button{
+    background: #f0c14b;
+    border: 1px solid;
+    margin: 10px 0;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
+.productpage__info > button:hover {
+    background: #d39400;
+}
+
+.productpage__rating{
+    display: flex;
+    
+}
+.productpage__rating > p{
+    font-size: 17px;
+    font-weight: 800;
+}
+
+
+.productpage__title{
+    font-size: 42px;
+    font-weight: 800;
+    margin-right: 25px;
+}
+.productpage__price{
+    font-size: 30px;
+    
+}
