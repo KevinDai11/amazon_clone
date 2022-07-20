@@ -28,7 +28,7 @@ function Header() {
 
         <div className = "header__nav">
             <div className = "header__option2">
-                <span className = "header__optionLineOne">Deliver to Unknown</span>
+                <span className = "header__optionLineOne">Deliver to {!user ? "Guest" : user.email}</span>
                 <span className = "header__optionLineTwo"><PinDrop/> City, Zip</span>
             </div>
         </div>
