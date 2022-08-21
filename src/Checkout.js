@@ -7,6 +7,18 @@ import CheckoutProduct from "./CheckoutProduct";
 function Checkout() {
   const [{ cart, user }, dispatch] = useStateValue();
 
+  if (!user) {
+    return (
+      <div className="checkout">
+        <div className="checkout__login">
+          <h1>You must be logged in to checkout</h1>
+          <p>
+            <a href="/login">Login</a>
+          </p>
+        </div>
+      </div>
+    ); 
+  }
   return (
     <div className="checkout">
       <div className="checkout__left">
